@@ -1,6 +1,7 @@
 import re.exception.MyUncheckedException;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.logging.SimpleFormatter;
 
@@ -21,7 +22,7 @@ public class Main {
         try{
             // khối code có thể sinh ngoại lệ
             System.out.println(Demo.calPerimieter(2,2,3));
-        }catch (IllegalArgumentException|MyUncheckedException e) {
+        }catch (Exception e) {
             // logic xử lí nếu lỗi
             System.out.println(e.getMessage());
             e.printStackTrace();
@@ -33,5 +34,16 @@ public class Main {
 
         // xử lý ngoại lệ : try, catch, finally
         System.out.println("Kết thúc chương trinh ");
+        System.out.println();
+        LocalDate localDate = null;
+        if(localDate != null){
+            localDate.toString();
+        }
+
+        /*
+               Ứng dụng:
+                + Nhập dữ liệu
+                + Xử lý kết nối : IOException, SQLException
+         */
     }
 }

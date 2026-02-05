@@ -12,28 +12,20 @@ public class Demo {
     }
 
     // ví dụ : kiểm tra tính hợp lệ của 1 tam giác , nếu hợp lệ thì tính chu vi
-    public static double calPerimieter(double a, double b, double c){
+    public static double calPerimieter(double a, double b, double c) throws Exception{
         if (a<=0 || b<=0 || c<=0){
             throw new IllegalArgumentException("Các cạnh tam giác ko thể <=0 !!");
         }
         if (a+b<=c ||b+c<=a||c+a<=b){
-            throw new MyUncheckedException("Tổng 2 cạnh ko thể <= cạnh còn lại !!!");
+            throw new Exception("Tổng 2 cạnh ko thể <= cạnh còn lại !!!");
         }
 
         return a+b+c;
     }
 
     public static void inputInt(){
-        Scanner sc = new Scanner(System.in);
-       while(true) {
-           try {
-               System.out.println("Nhập 1 số nguyên");
-               int a = Integer.parseInt(sc.nextLine());
-               break;
-           } catch (NumberFormatException e) {
-               System.err.println("Vui lòng nhập 1 so nguyên");
-           }
-       }
+        System.out.println("Vui lòng nhập 1 số nguyên");
+        int a = InputMethods.getInteger();
     }
 
     public static void main(String[] args) {
